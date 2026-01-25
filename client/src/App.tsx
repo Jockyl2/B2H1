@@ -13,6 +13,7 @@ import DiabetesPrograms from "@/pages/diabetes-programs";
 import Doctors from "@/pages/doctors";
 import Contact from "@/pages/contact";
 import NonProfitCollaboration from "@/pages/non-profit";
+import SocialMedia from "@/pages/social-media";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/doctors" component={Doctors} />
       <Route path="/contact" component={Contact} />
       <Route path="/non-profit" component={NonProfitCollaboration} />
+      <Route path="/social-media" component={SocialMedia} />
       <Route component={NotFound} />
     </Switch>
   );

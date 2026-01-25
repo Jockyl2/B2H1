@@ -159,6 +159,13 @@ export default function Navigation() {
               </button>
               
               <Link
+                href="/social-media"
+                className="text-[hsl(var(--neutral-dark))] hover:text-pink-600 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-pink-50"
+              >
+                Social Media
+              </Link>
+              
+              <Link
                 href="/non-profit"
                 className="flex flex-col items-center justify-center p-2 rounded-lg transition-all duration-200 hover:shadow-lg transform hover:scale-105"
               >
@@ -223,6 +230,12 @@ export default function Navigation() {
             >
               Contact
             </button>
+            <Link
+              href="/social-media"
+              className="block px-4 py-3 text-base font-medium text-[hsl(var(--neutral-dark))] hover:text-pink-600 hover:bg-pink-50 w-full text-left rounded-lg transition-all duration-200"
+            >
+              Social Media
+            </Link>
             <Link
               href="/non-profit"
               className="flex items-center px-4 py-3 hover:bg-blue-50 w-full rounded-lg transition-all duration-200"
