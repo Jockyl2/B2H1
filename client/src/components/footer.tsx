@@ -104,7 +104,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                info@back2health.com
+                back2healthug@gmail.com
               </li>
               <li className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />

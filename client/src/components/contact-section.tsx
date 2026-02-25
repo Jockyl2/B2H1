@@ -113,8 +113,8 @@ export default function ContactSection() {
               <div>
                 <h4 className="font-semibold text-[hsl(var(--neutral-dark))] mb-2">Email Address</h4>
                 <div className="text-gray-600 space-y-1">
-                  <a href="mailto:info@back2health.com" className="text-blue-600 hover:underline">
-                    info@back2health.com
+                  <a href="mailto:back2healthug@gmail.com" className="text-blue-600 hover:underline">
+                    back2healthug@gmail.com
                   </a>
                 </div>
               </div>

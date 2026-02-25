@@ -143,8 +143,8 @@ export default function LocationHoursSection() {
                   </div>
                   <div className="flex-1">
                     <p className="text-gray-900 font-semibold mb-1">Email</p>
-                    <a href="mailto:info@back2health.com" className="text-[hsl(var(--wellness-blue))] hover:text-blue-700 font-medium text-lg transition-colors duration-200 hover:underline">
-                      info@back2health.com
+                    <a href="mailto:back2healthug@gmail.com" className="text-[hsl(var(--wellness-blue))] hover:text-blue-700 font-medium text-lg transition-colors duration-200 hover:underline">
+                      back2healthug@gmail.com
                     </a>
                   </div>
                 </div>
@@ -185,10 +185,10 @@ export default function LocationHoursSection() {
               </h4>
             </div>
             <a 
-              href="mailto:info@back2health.com" 
+              href="mailto:back2healthug@gmail.com" 
               className="text-[hsl(var(--wellness-blue))] hover:text-blue-700 text-xl font-semibold transition-colors duration-200 hover:underline flex items-center justify-center group"
             >
-              info@back2health.com
+              back2healthug@gmail.com
               <ArrowRight className="ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
             </a>
           </div>
