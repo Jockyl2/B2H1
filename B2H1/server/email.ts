@@ -77,7 +77,7 @@ export async function sendAppointmentConfirmation(appointmentData: AppointmentEm
     // Send onboarding notification to clinic admin
     const adminEmail = await resend.emails.send({
       from: 'Back 2 Health <onboarding@resend.dev>',
-      to: ['viankamanzi5@gmail.com'],
+      to: ['back2healthug@gmail.com'],
       subject: 'New Appointment Request - Back 2 Health',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -149,7 +149,7 @@ export async function sendContactFormNotification(contactData: {
     // Send notification to clinic admin
     const adminEmail = await resend.emails.send({
       from: 'Back 2 Health <onboarding@resend.dev>',
-      to: ['viankamanzi5@gmail.com'],
+      to: ['back2healthug@gmail.com'],
       subject: 'New Contact Form Submission - Back 2 Health',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
