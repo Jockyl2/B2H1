@@ -1,7 +1,6 @@
 import { Resend } from 'resend';
 
-// Initialize Resend only if API key is available
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export interface AppointmentEmailData {
   name: string;
@@ -15,20 +14,9 @@ export interface AppointmentEmailData {
 
 export async function sendAppointmentConfirmation(appointmentData: AppointmentEmailData) {
   try {
-    // Check if Resend is available
-    if (!resend) {
-      console.log('📧 Email service not configured (missing RESEND_API_KEY), skipping appointment emails');
-      return {
-        success: true,
-        patientEmailId: null,
-        adminEmailId: null,
-        message: 'Email service not configured'
-      };
-    }
-
     // Send confirmation email to the patient
     const patientEmail = await resend.emails.send({
-      from: 'Back 2 Health <onboarding@resend.dev>',
+      from: 'Back 2 Health <B2H1@updates.jwtechservices.co.uk>',
       to: [appointmentData.email],
       subject: 'Appointment Request Confirmed - Back 2 Health',
       html: `
@@ -64,7 +52,7 @@ export async function sendAppointmentConfirmation(appointmentData: AppointmentEm
             
             <div style="background: #f0fdf4; padding: 15px; border-radius: 6px; margin: 20px 0;">
               <p style="margin: 5px 0; color: #166534;"><strong>📞 Phone:</strong> 0758 478992</p>
-              <p style="margin: 5px 0; color: #166534;"><strong>📧 Email:</strong> viankamanzi5@gmail.com</p>
+              <p style="margin: 5px 0; color: #166534;"><strong>📧 Email:</strong> back2healthug@gmail.com</p>
               <p style="margin: 5px 0; color: #166534;"><strong>📍 Address:</strong> Moyo Cl, Kampala, Uganda</p>
             </div>
             
@@ -80,7 +68,7 @@ export async function sendAppointmentConfirmation(appointmentData: AppointmentEm
           
           <div style="background: #f9fafb; padding: 20px; text-align: center; color: #6b7280; font-size: 12px;">
             <p>Back 2 Health - Holistic Wellness Center</p>
-            <p>Phone: 0758 478992 | Email: back2healthug@gmail.com</p>
+            <p>Moyo Cl, Kampala, Uganda | Phone: 0758 478992</p>
           </div>
         </div>
       `,
@@ -88,8 +76,8 @@ export async function sendAppointmentConfirmation(appointmentData: AppointmentEm
 
     // Send onboarding notification to clinic admin
     const adminEmail = await resend.emails.send({
-      from: 'Back 2 Health <onboarding@resend.dev>',
-      to: ['viankamanzi5@gmail.com'],
+      from: 'Back 2 Health <B2H1@updates.jwtechservices.co.uk>',
+      to: ['back2healthug@gmail.com'],
       subject: 'New Appointment Request - Back 2 Health',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -158,20 +146,10 @@ export async function sendContactFormNotification(contactData: {
   message: string;
 }) {
   try {
-    // Check if Resend is available
-    if (!resend) {
-      console.log('📧 Email service not configured (missing RESEND_API_KEY), skipping contact form notification');
-      return {
-        success: true,
-        adminEmailId: null,
-        message: 'Email service not configured'
-      };
-    }
-
     // Send notification to clinic admin
     const adminEmail = await resend.emails.send({
-      from: 'Back 2 Health <onboarding@resend.dev>',
-      to: ['viankamanzi5@gmail.com'],
+      from: 'Back 2 Health <B2H1@updates.jwtechservices.co.uk>',
+      to: ['back2healthug@gmail.com'],
       subject: 'New Contact Form Submission - Back 2 Health',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
