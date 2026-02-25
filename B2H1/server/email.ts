@@ -52,7 +52,7 @@ export async function sendAppointmentConfirmation(appointmentData: AppointmentEm
             
             <div style="background: #f0fdf4; padding: 15px; border-radius: 6px; margin: 20px 0;">
               <p style="margin: 5px 0; color: #166534;"><strong>📞 Phone:</strong> 0758 478992</p>
-              <p style="margin: 5px 0; color: #166534;"><strong>📧 Email:</strong> viankamanzi5@gmail.com</p>
+              <p style="margin: 5px 0; color: #166534;"><strong>📧 Email:</strong> back2healthug@gmail.com</p>
               <p style="margin: 5px 0; color: #166534;"><strong>📍 Address:</strong> Moyo Cl, Kampala, Uganda</p>
             </div>
             
